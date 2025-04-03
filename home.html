@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> The Book House</title>
+	<link rel="stylesheet" href="home.css">
+	<style>
+	h1{
+		color:royalblue;
+		text-align:center;
+	}
+</style>
+<style>
+	h2{
+		font-weight:bold;
+		color:blueviolet;
+	}
+</style>
+<style>
+	h3{
+		color:royalblue;
+	}
+</style>
+</head>
+<body>
+	 <?php if(isset($_SESSION['logout'])): ?>
+    <div class="success"><?php echo $_SESSION['logout']; unset($_SESSION['logout']); ?></div>
+<?php endif; ?>
+<!--heading-->
+<h1> Welcome to The Book House</h1>
+
+<!--navigation links-->
+    <ol class="nav">
+        <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="registration.html">Registration</a></li>
+    <li><a href="catalog.html">Catalog</a></li>
+    </ol>
+<h2> Your Gateway to New Worlds!</h2>
+<hr>
+<p>Whether you're a passionate bookworm or just beginning your literary journey, you've come to the right place. At The Book House, we believe that every story has the power to ignite your imagination, inspire your dreams, and transform your world. Our carefully curated collection spans a variety of genres;horror, non-fiction, fantasy, mystery, romance, and more ensuring there's something for every reader.
+</p>
+<img src="https://th.bing.com/th/id/OIP._00n7l4sYvL3PxZZpy2BOgHaE7?w=256&h=180&c=7&r=0&o=5&pid=1.7">
+<p>Explore our shelves, discover your next favorite read, and let the magic of storytelling take you on an unforgettable adventure. </p>
+
+<h2>Featured Books</h2>
+<div class="featured-books">
+    <div class="book">
+        <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6CAJ4UTPRJFJXCF43NSENOSBQI_size-normalized.jpg&w=1200" width="250">
+        <h4>A Grave Robbery</h4>
+        <p>Join the heroes on a journey through uncharted lands, full of mystery and excitement.</p>
+    </div>
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81rTv3LnJHL._UF1000,1000_QL80_.jpg"width="250">
+        <h4>Nightmare Awakened</h4>
+        <p>A spine-chilling tale that will keep you up at night, gripping and intense.</p>
+    </div>
+    <div class="book">
+        <img src="https://m.media-amazon.com/images/I/91W8apzDaOL._UF1000,1000_QL80_.jpg"width="250">
+        <h4>The Enchanted Forest</h4>
+        <p>A magical adventure where anything is possible, from talking animals to enchanted castles.</p>
+    </div>
+</div>
+<h2>Operating Hours</h2>
+ <table class="operating-hours">
+                <tr>
+                    <th>Day</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 AM</td>
+                    <td>7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00 AM</td>
+                    <td>7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00 AM</td>
+                    <td>7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00 AM</td>
+                    <td>7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00 AM</td>
+                    <td>9:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>10:00 AM</td>
+                    <td>6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                    <td>Closed</td>
+                </tr>
+            </table>
+<h3>Get in Touch</h3>
+
+        <p>If you have any questions or need assistance, please feel free to reach out to us!</p>
+        <div class="get-form">
+        <form action="Catalog" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit"name="submit" value="Send Message">
+        </form>
+    </div>
+</body>
+</html>

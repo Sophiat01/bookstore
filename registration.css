@@ -1,0 +1,88 @@
+@import url('https://fonts.google.com/specimen/EB+Garamond');
+/*navigation bar*/
+.nav{
+	list-style-type: none;
+	background-color:skyblue;
+	padding:20px;
+	overflow:hidden;
+	display:flex;
+	justify-content:center;
+}
+
+/*nav links*/
+li a{
+	color:white;
+	text-decoration:none;
+	font-size:1.3rem;
+	padding:18px 40px;
+}
+
+li a:hover{
+	background-color:royalblue;
+	color:black;
+}
+
+
+/*Registration Form*/
+.registration-form{
+	background-color:#a2d2ff;
+	margin:12px 200px;
+	padding:10px;
+	border-radius:10px;
+}
+input, select, label{
+	margin:auto;
+	text-align:left;
+}
+input, select{
+	width:;
+	padding:10px 20px;
+	border:none;
+	border-radius:10px;
+}
+label{
+	color:black;
+}
+h3{
+	text-align: center;
+	font-size: 25px;
+}
+
+h1{
+	font-family:'EB Garamond',sans-serif;
+}
+
+[type=submit], [type=reset]{
+	background-color:#219ebc;
+	color:beige;
+	margin-top:10px;
+}
+
+
+[type=reset]:hover, [type=submit]:hover{
+	opacity:0.5;
+	background-color:#45a049;
+	color:darkturquoise;
+}
+
+body{
+	
+	 font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    color: #333;
+}
+
+.login-form{
+	background-color:#a2d2ff;
+	margin:10px 200px;
+	padding:7px;
+	border-radius:7px;
+	display:block;
+}
+.forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
