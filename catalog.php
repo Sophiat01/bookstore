@@ -16,6 +16,7 @@ if (!isset($_SESSION['user_id'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['borrow_book'])) {
     $user_id = $_SESSION['user_id'];
     $book_title = mysqli_real_escape_string($conn, $_POST['book_title']);
+    $borrow_date = date('Y-m-d');
     $return_date = date('Y-m-d', strtotime('+14 days'));
     
     // Check if book is already borrowed
@@ -28,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['borrow_book'])) {
         $check_user = "SELECT id FROM users WHERE id = '$user_id'";
         $result = mysqli_query($conn, $check_user);
         if (mysqli_num_rows($result) > 0) {
-            $sql = "INSERT INTO borrowed_books (user_id, book_title, return_date) 
-                    VALUES ('$user_id', '$book_title', '$return_date')";
+            $sql = "INSERT INTO borrowed_books (user_id, book_title, borrow_date, return_date) 
+                    VALUES ('$user_id', '$book_title', '$borrow_date', '$return_date')";
             if (mysqli_query($conn, $sql)) {
                 $success_message = "Book '$book_title' borrowed successfully!";
             } else {
@@ -55,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['borrow_book'])) {
         <li><a href="home.html">Home</a></li>
         <li><a href="profile.php">Profile</a></li>
         <li><a href="catalog.php" class="active">Catalog</a></li>
+        <li><a href="borrowed_books.php">Borrowed Books</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ol>
 

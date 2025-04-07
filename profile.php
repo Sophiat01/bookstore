@@ -81,6 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_profile'])) {
     <ol class="nav">
         <li><a href="home.html">Home</a></li>
         <li><a href="catalog.php">Catalog</a></li>
+        <li><a href="borrowed_books.php">Borrowed Books</a></li>
         <li><a href="profile.php" class="active">Profile</a></li>
         <li><a href="logout.php">Logout</a></li>
     </ol>
